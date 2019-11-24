@@ -1,0 +1,110 @@
+\ProvidesPackage{kcpc2019}
+\usepackage{xcolor}
+\usepackage{comment}
+
+\definecolor{my-green}{HTML}{008000}
+%\usepackage[hangul]{kotex}
+
+\newcommand{\kcpcintro}[2]{
+\section*{문제 목록}
+대회는 \textbf{#1시간} 동안 진행되며, 총 \textbf{#2문제}로 구성되어 있습니다.
+
+총 문제지가 표지를 제외하고 \pageref{LastPage}쪽인지 확인하시길 바랍니다.
+
+문제의 목록은 다음과 같습니다.
+}
+
+
+
+%%%%%%%% Practice session here...
+
+%%%%%%%%
+
+\begin{comment}
+# printing Python script
+probnames = [
+    "first",
+    "pika",
+    "cake",
+    "coin",
+    "trap",
+    "cheer",
+    "faith",
+    "pretty",
+    "ooo",
+    "nocarry",
+    "server",
+    "trip",
+]
+options = ["time", "memory"]
+values = {
+    "time"      : 1,
+    "memory"    : 512,
+}
+for probname in probnames:
+    for option in options:
+        print("\\newcommand", end='')
+        print("{{\\kcpcprob{probname}{option}}}{{{value}}}".format(
+            probname=probname, option=option, value=values[option]))
+    print("")
+\end{comment}
+
+\newcommand{\kcpcprobfirst}{평생 새내기가 되고 싶은 유신이}
+\newcommand{\kcpcprobfirstshort}{first-year}
+\newcommand{\kcpcprobfirsttime}{1}
+\newcommand{\kcpcprobfirstmemory}{512}
+
+\newcommand{\kcpcprobpika}{피카츄 라이츄}
+\newcommand{\kcpcprobpikashort}{pika}
+\newcommand{\kcpcprobpikatime}{1}
+\newcommand{\kcpcprobpikamemory}{512}
+
+\newcommand{\kcpcprobcake}{초코칩 케이크}
+\newcommand{\kcpcprobcakeshort}{cake}
+\newcommand{\kcpcprobcaketime}{1}
+\newcommand{\kcpcprobcakememory}{512}
+
+\newcommand{\kcpcprobcoin}{존버왕 김코인} % 학교 대회인데 '존버'를 써도 되나
+\newcommand{\kcpcprobcoinshort}{coin}
+\newcommand{\kcpcprobcointime}{1}
+\newcommand{\kcpcprobcoinmemory}{512}
+
+\newcommand{\kcpcprobtrap}{함정에 빠진 이동관}
+\newcommand{\kcpcprobtrapshort}{trap}
+\newcommand{\kcpcprobtraptime}{1}
+\newcommand{\kcpcprobtrapmemory}{512}
+
+\newcommand{\kcpcprobcheer}{힘내라 이세정} % tentative
+\newcommand{\kcpcprobcheershort}{cheer}   % tentative
+\newcommand{\kcpcprobcheertime}{1}
+\newcommand{\kcpcprobcheermemory}{512}
+
+\newcommand{\kcpcprobfaith}{신앙}
+\newcommand{\kcpcprobfaithshort}{faith}
+\newcommand{\kcpcprobfaithtime}{1}
+\newcommand{\kcpcprobfaithmemory}{512}
+
+\newcommand{\kcpcprobpretty}{얼마나 예뻐?}
+\newcommand{\kcpcprobprettyshort}{pretty}
+\newcommand{\kcpcprobprettytime}{1}
+\newcommand{\kcpcprobprettymemory}{512}
+
+\newcommand{\kcpcprobooo}{ㅇㅇㅇ}
+\newcommand{\kcpcproboooshort}{ooo}
+\newcommand{\kcpcproboootime}{1}
+\newcommand{\kcpcprobooomemory}{512}
+
+\newcommand{\kcpcprobnocarry}{Sum without carries}
+\newcommand{\kcpcprobnocarryshort}{nocarry}
+\newcommand{\kcpcprobnocarrytime}{1}
+\newcommand{\kcpcprobnocarrymemory}{512}
+
+\newcommand{\kcpcprobserver}{서버 증축}
+\newcommand{\kcpcprobservershort}{server}
+\newcommand{\kcpcprobservertime}{1}
+\newcommand{\kcpcprobservermemory}{512}
+
+\newcommand{\kcpcprobtrip}{이상한 나라의 여행계획}
+\newcommand{\kcpcprobtripshort}{trip}
+\newcommand{\kcpcprobtriptime}{1}
+\newcommand{\kcpcprobtripmemory}{512}

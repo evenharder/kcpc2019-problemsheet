@@ -1,0 +1,20 @@
+\subsection*{컴파일 옵션}
+사용가능한 언어와 컴파일 옵션은 다음과 같습니다. \verb|"$@"|는 업로드한 코드 및 생성된 프로그램 이름입니다.
+\begin{itemize}
+    \item \textbf{C11} (\texttt{gcc 8.3.0})\\
+    컴파일 : \verb|gcc -x c -Wall -O2 -std=c11 -static -pipe -o "$DEST" "$@" -lm|\\
+    실행 : \verb|exec "$@"|
+    \item \textbf{C++17} (\texttt{g++ 8.3.0})\\
+    컴파일 : \verb|g++ -x c++ -Wall -O2 -std=c++17 -static -pipe -o "$DEST" "$@" -lm|\\
+    실행 : \verb|exec "$@"|
+    \item \textbf{Java} (\texttt{Java 11.0.4})\\
+    컴파일 : \verb|javac -encoding UTF-8 -sourcepath . -d . "$@" 2> "$TMPFILE"|\\
+    실행 : \verb|java -Dfile.encoding=UTF-8 -XX:+UseSerialGC -Xss${MEMSTACK}k -Xms${MEMLIMITJAVA}k \|
+    \verb|-Xmx${MEMLIMITJAVA}k '$MAINCLASS' "\$@"|
+    \begin{itemize}
+        \item \verb|MEMSTACK|은 \verb|65536|이며, \verb|MEMLIMIT|은 문제의 제한에서 128MB를 뺀 값입니다.
+    \end{itemize}
+    \item \textbf{Python 3} (\texttt{Python 3.7.3})\\
+    컴파일 : \verb|python3 -m py_compile "$@"|\\
+    실행 : \verb|python3 "$@"|
+\end{itemize}
