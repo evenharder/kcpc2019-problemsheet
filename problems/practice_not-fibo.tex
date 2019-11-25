@@ -1,0 +1,37 @@
+\begin{problem}{\kcpcpprobnotfibo\ (\kcpcpprobnotfiboshort)}
+    {표준 입력}{표준 출력}
+    {\kcpcpprobnotfibotime\,초}{\kcpcpprobnotfibomemory\,MB}{}
+    
+    $ a_1 = 1 $, $ a_2 = 1 $이라 잡고 $ a_n = a_{n-1} + a_{n-2}\ (n \geq 3) $으로 정의되는 수열 $ \{a_k\} $ 를 피보나치 수열이라 한다. 처음 10개의 항을 나열하면 1, 1, 2, 3, 5, 8, 13, 21, 34, 55이다.
+    
+    피보나치 수열을 나열하는 것은 쉽다. 그럼 피보나치 수열에 포함되지 않는 양의 정수들을 작은 순서대로 나열하는 건 어떨까? 처음 10개의 항을 나열하면 4, 6, 7, 9, 10, 11, 12, 14, 15, 16이다. 피보나치 수열에 없는 수 중 $ n $번째로 작은 수를 구해보자.
+    
+    \InputFile
+    
+    첫 번째 줄에는 양의 정수 $ n $이 주어진다. ($ 1 \leq n \leq 1,000,000 $)
+    
+    \OutputFile
+    
+    첫 번째 줄에 위에서 정의된 피보나치 수열에 포함되지 않는 양의 정수 중 $ n $번째로 작은 수를 출력한다.
+    
+    \Examples
+    \begin{example}
+        \exmp{
+            1
+        }{%
+            4
+        }%
+        \exmp{
+            4
+        }{%
+            9
+        }%
+        \exmp{
+            12
+        }{%
+            18
+        }%
+    \end{example}
+    
+\end{problem}
+
