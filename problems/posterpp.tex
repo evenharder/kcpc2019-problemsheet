@@ -1,0 +1,88 @@
+\begin{problem}{\kcpcprobposter\ (\kcpcprobpostershort)}
+    {표준 입력}{표준 출력}
+    {\kcpcprobpostertime\,초}{\kcpcprobpostermemory\,MB}{}
+    
+    고려대학교에는 학생들의 소통을 위한 게시판이 설치되어있다. 고려대학교 학생들은 게시판에 대자보를 붙여 자신의 신념을 밝히기도 하고, 비리나 부당한 상황을 고발하기도 한다. 
+    
+    그러던 어느날 게시판에 숫자로만 이루어진 긴 수열의 대자보가 붙었다. 사람들은 며칠간 수열에 담긴 의미를 찾아보려고 노력했지만, 그 누구도 해결하지 못했고 결국 해당 대자보는 철거되었다. 하지만 같은 형식의 수열로 이루어진 대자보가 몇차례 등장하였고, 사람들은 이를 누군가의 장난이라고 여기게 되었다.
+    
+    하지만 ALPS의 회장 이세정은 그 정답을 예전부터 알고 있었다. 해당 수열은 알파벳 소문자로 이루어진 단어를 아래 방법을 따라 변환시킨 것이다.
+    
+    \begin{enumerate}
+        \item 단어의 각 알파벳 소문자를 아래 표와 같이 1에서 26으로 변환한다.
+        \item 이웃한 두 숫자를 곱한 결과를 한 글자씩 나열한다. 예를 들어, \texttt{apple}의 각 알파벳은 \texttt{1 16 16 12 5}으로 변환되고, 한 자씩 나열하면 \texttt{1 6 2 5 6 1 9 2 6 0}이 된다.
+    \end{enumerate}
+    
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{|cc|cc|cc|cc|cc|cc|}
+            \hline
+            알파벳 & 숫자 & 알파벳 & 숫자 & 알파벳 & 숫자 & 알파벳 & 숫자 & 알파벳 & 숫자 & 알파벳 & 숫자  \\ \hline \hline
+            \texttt{a} & 1 &
+            \texttt{b} & 2 &
+            \texttt{c} & 3 &
+            \texttt{d} & 4 &
+            \texttt{e} & 5 &
+            \texttt{f} & 6 \\ \hline
+            \texttt{g} & 7 &
+            \texttt{h} & 8 &
+            \texttt{i} & 9 &
+            \texttt{j} & 10 &
+            \texttt{k} & 11 &
+            \texttt{l} & 12 \\ \hline
+            \texttt{m} & 13 &
+            \texttt{n} & 14 &
+            \texttt{o} & 15 &
+            \texttt{p} & 16 &
+            \texttt{q} & 17 &
+            \texttt{r} & 18 \\ \hline
+            \texttt{s} & 19 &
+            \texttt{t} & 20 &
+            \texttt{u} & 21 &
+            \texttt{v} & 22 &
+            \texttt{w} & 23 &
+            \texttt{x} & 24 \\ \hline
+            \texttt{y} & 25 &
+            \texttt{z} & 26 &
+            & & & & & & & \\ \hline
+        \end{tabular}
+    \end{table}
+    %a:1, b:2, c:3, d:4, e:5, f:6, g:7, h:8, i:9, j:10, k:11, l:12, m:13
+    %n:14, o:15, p:16, q:17, r:18, s:19, t:20, u:21, v:22, w:23, x:24, y:25, z:26
+    %[변환 표] 
+    
+    세정이는 해당 대자보가 올라올 때마다 대자보를 해석하면서, 대자보를 붙인 사람에 대한 증거를 모으고 있다. 하지만 한 대자보의 수열이 수많은 알파벳 문자열로 변환이 될 수 있다. 일단 세정이는 가능한 원본 문자열의 개수를 구해보고자 한다. 값이 매우 커질 수 있으므로, $ 1,000,000,007 $로 나눈 나머지를 구하자.
+    
+    \InputFile
+    첫 번째 줄에 수열의 길이인 정수 $N$이 주어진다. $ (3 \leq N \leq 300,000)$
+    
+    두 번째 줄에 $N$개의 한 자리 정수 $a_1, a_2, \cdots, a_N$이 공백으로 구분되어 주어진다. ($0 \leq a_i \leq 9$)
+    
+    $a_i$는 수열의 $i$번째 숫자를 의미한다. 첫 번째 숫자가 0인 경우는 주어지지 않는다.
+    
+    \OutputFile
+    주어진 수열에 대해 세정이가 확인해야 하는 단어의 수를 $ 1,000,000,007 $로 나눈 나머지를 출력한다.
+    
+    \Examples
+    \begin{example}
+        \exmp{
+            3
+            4 4 4
+        }{%
+            7
+        }%
+        \exmp{
+            6
+            3 6 3 6 3 6
+        }{%
+            12
+        }%
+        \exmp{
+            10
+            2 8 2 1 9 0 9 2 2 4
+        }{%
+            0
+        }%
+    \end{example}
+\end{problem}
+
