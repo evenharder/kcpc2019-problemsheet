@@ -1,0 +1,48 @@
+\begin{problem}{\kcpcprobnocarry\ (\kcpcprobnocarryshort)}
+    {표준 입력}{표준 출력}
+    {\kcpcprobnocarrytime\,초}{\kcpcprobnocarrymemory\,MB}{}
+    
+    정수 $x$, $y$에 대해 $x \oplus y$ 라는 연산을 정의하자. $x \oplus y$ 는 $x$와 $y$를 $d$진법 상에서 더하되, carry(자리 올림)가 없는 연산이다. 즉, 각 자리수를 따로 더하고 각 자리마다 $d$로 나눈 나머지를 취하는 연산이다.
+    
+    예를 들어, $d=4$ 이면, $7_{10} \oplus 10_{10} = 13_{4} \oplus 22_{4} = 31_{4} = 13_{10}$ 이 된다.
+    
+    당신에게 $q$ 개의 쿼리가 주어진다. 각 쿼리는 $2$개의 정수 $l, R$을 담고 있다. 당신은 각 쿼리마다 다음을 만족하는 $r$ 중에서 가장 큰 $r$ 값을 구해야 한다.
+    
+    \begin{itemize}
+    \item $l < r \le R$
+    \item $a_{l} \oplus a_{l+1} \oplus \ldots \oplus a_{r}$ 이 가능한 한 제일 높아야 한다.
+    \end{itemize}
+    
+    
+    \InputFile
+    첫 번째 줄에 세 정수 $n$, $d$, $q$가 공백으로 구분되어 주어진다. ($2 \le n \le 10^5$, $2 \le d \le 10$, $1 \le q \le 10^5$) $n$은 수열의 길이, $d$는 진법, $q$는 쿼리의 개수이다.
+    
+    두 번째 줄에 수열의 값을 의미하는 $n$개의 정수 $a_{1}, a_{2}, \ldots, a_{n}$이 공백으로 구분되어 주어진다. ($0 \le a_{i} \le 10^{18}$)
+    
+    세 번째 줄부터 $q$개의 줄에 걸쳐 쿼리를 의미하는 $2$개의 정수 $l$, $R$이 공백으로 구분되어 주어진다. ($1 \le l < R \le n$)
+    
+    \OutputFile
+    $q$개의 줄에 걸쳐 각 쿼리에 대한 정답 $r$을 출력한다.
+    
+    \Examples
+    \begin{example}
+        \exmp{
+            7 10 6
+            16 27 90 0 73 55 4
+            1 6
+            2 4
+            4 6
+            5 6
+            3 5
+            1 3
+        }{%
+            5
+            4
+            5
+            6
+            4
+            2
+        }%
+    \end{example}
+\end{problem}
+

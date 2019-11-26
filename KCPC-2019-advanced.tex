@@ -15,12 +15,14 @@
 \usepackage{enumitem} % for item environment line spacing
 \usepackage{framed}
 \usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{float}
 \usepackage{olymp} % modified by @evenharder
 \usepackage{kcpc2019}
-
+\usetikzlibrary{patterns}
 \renewcommand{\baselinestretch}{1.15}
 \contest
-{고려대학교 프로그래밍 경시대회 - 일반 부문}%
+{고려대학교 프로그래밍 경시대회 - 일반 부문 {\color{red} Revision 1}}%
 {Korea University}%
 {2019.11.30}%
 
@@ -77,7 +79,7 @@
     \renewcommand{\arraystretch}{1.2}
         \begin{tabular}{cll}
         A & \kcpcprobtrap      & (\kcpcprobtrapshort) \\
-        B & \kcpcprobcheer     & (\kcpcprobcheershort) \\
+        B & \kcpcprobposter    & (\kcpcprobpostershort) \\
         C & \kcpcprobfaith     & (\kcpcprobfaithshort) \\
         D & \kcpcprobpretty    & (\kcpcprobprettyshort) \\
         E & \kcpcprobnocarry   & (\kcpcprobnocarryshort) \\
@@ -89,6 +91,12 @@
     \newpage
     %asdfasdfasdf
     \import{"./problems/"}{trap.tex}
+    \import{"./problems/"}{posterpp.tex}
+    \import{"./problems/"}{faith.tex}
+    \import{"./problems/"}{pretty.tex}
+    \import{"./problems/"}{nocarry.tex}
+    \import{"./problems/"}{server.tex}
+    \import{"./problems/"}{trip.tex}
     %\import{"./problems/"}{dice.tex}
     %\import{"./problems/"}{climbing.tex}
     %\import{"./problems/"}{hanosam.tex}
@@ -98,3 +106,4 @@
     %\import{"./problems/"}{tour.tex}
     
 \end{document}
+
