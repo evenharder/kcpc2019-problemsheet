@@ -15,9 +15,11 @@
 \usepackage{enumitem} % for item environment line spacing
 \usepackage{framed}
 \usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{float}
 \usepackage{olymp} % modified by @evenharder
 \usepackage{kcpc2019}
-
+\usetikzlibrary{patterns}
 \renewcommand{\baselinestretch}{1.15}
 \contest
 {고려대학교 프로그래밍 경시대회 - 타 전공/신입생 부문 {\color{red} Revision 1}}%
@@ -84,7 +86,7 @@
         F & \kcpcprobposter     & (\kcpcprobpostershort) \\
         G & \kcpcprobfaith      & (\kcpcprobfaithshort) \\
         H & \kcpcprobpretty     & (\kcpcprobprettyshort) \\
-        I & \kcpcprobooo        & (\kcpcproboooshort) \\
+        I & \kcpcproboo         & (\kcpcprobooshort) \\
         \end{tabular}
     \end{table}
     }
@@ -98,6 +100,6 @@
     \import{"./problems/"}{posterpp.tex} % poster.tex won't work
     \import{"./problems/"}{faith.tex}
     \import{"./problems/"}{pretty.tex}
-    %\import{"./problems/"}{tour.tex}
+    \import{"./problems/"}{oo.tex}
     
 \end{document}
