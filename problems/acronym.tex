@@ -8,12 +8,14 @@
     
     \begin{itemize}
     \item \texttt{"ABCDE"} $ \to $ \texttt{"BD"}
-    \item \texttt{"Korea University Collegiate Programming Contest"} $ \to $ \texttt{"KCPC"}
+    \item \texttt{"KoreaUniversityCollegiateProgrammingContest"} $ \to $ \texttt{"KCPC"}
     \end{itemize}
+    
+    따옴표 \texttt{"}는 문자열의 경계를 표현하기 위한 것이지, 문자열의 일부가 아니다.
     
     어떤 문자열 $ S $를 축약해서 \texttt{"KCPC"}로 만들 수 있는지 확인하는 것은 이미 있는 문제이니 \texttt{"KCPC"}로도 주어진 문자열 $ A $로도 축약 가능한지 확인해 보기로 하였다.
     
-    문제에서 요구하는 것은 문자열 $ A $와 $ S $가 주어졌을 때, 문자열 $ S $를 축약해서 문자열 $ A $를 만들 수 있는지, 또 문자열 $ S $를 축악해서 \texttt{"KCPC"}로도 만들 수 있는지 확인하는 것이다.
+    문제에서 요구하는 것은 문자열 $ A $와 $ S $가 주어졌을 때, 문자열 $ S $를 축약해서 문자열 $ A $를 만들 수 있는지, 또 문자열 $ S $를 축약해서 \texttt{"KCPC"}로도 만들 수 있는지 확인하는 것이다.
     
     대문자와 소문자는 다른 문자로 취급하며, 축약 과정은 독립적이다.
     
@@ -36,8 +38,8 @@
             KCPC!
         }%
         \exmp{
-            KOREA
-            ILOVEKCPC
+            Cat
+            KcpCanDstRingS
         }{%
             KCPC?
         }%
@@ -48,5 +50,14 @@
             KCPC!
         }%
     \end{example}
+    
+    \Explanation
+    첫 번째 예제의 경우 \texttt{I\underline{LOVE}KCPC}와 \texttt{ILOVE\underline{KCPC}}처럼 \texttt{LOVE}로도 \texttt{KCPC}로도 축약할 수 있다.
+    
+    두 번째 예제의 경우 \texttt{Kcp\underline{Ca}nDs\underline{t}RingS}처럼 \texttt{Cat}으로 축약할 수는 있지만, \texttt{KCPC}로 축약할 수는 없다. 알파벳 대소문자를 구문함에 유의해야 한다.
+    
+    세 번째 예제의 경우 \texttt{K\underline{C}P\underline{C}K\underline{C}P\underline{C}}와 \texttt{\underline{K}CP\underline{C}KC\underline{P}\underline{C}}처럼 \texttt{CCCC}로도 \texttt{KCPC}로도 축약할 수 있다.
+    
+    
 \end{problem}
 
