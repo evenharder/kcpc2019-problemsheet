@@ -16,7 +16,7 @@
     
     한 정점에서의 전위 순회는 그 서브트리의 모든 정점을 정확히 한 번만 방문하기 때문에 의미가 있다.
     
-    수학적 정의가 귀찮았지만 트리를 그리는 건 좋았던 피카츄는 인터넷 검색을 통해 1번 정점이 루트인 트리를 그렸다. 트리를 더 장식하기 위해 각 정점에 괄호(여는 괄호 \verb|'('| 또는 닫는 괄호 \verb|')'|)를 한 개씩 그렸는데, 트리를 본 지우는 정점이 다음의 성질을 만족하면 아름답다고 정의했다.
+    수학적 정의가 귀찮았지만 트리를 그리는 건 좋았던 피카츄는 인터넷 검색을 통해 1번 정점이 루트인 트리를 그렸다. 트리를 더 장식하기 위해 각 정점에 괄호(여는 괄호 \texttt{'('} 또는 닫는 괄호 \texttt{')'})를 한 개씩 그렸는데, 트리를 본 지우는 정점이 다음의 성질을 만족하면 아름답다고 정의했다.
     
     \begin{itemize}
         \item 정점 $x$에서의 전위 순회를 하며, 방문한 순서대로 각 정점에 부여된 괄호를 추가해가며 문자열을 얻을 수 있다. 이렇게 만들 수 있는 괄호 문자열이 \textbf{올바른 괄호 문자열}이 존재한다면 $ x $는 아름답다.    
@@ -25,8 +25,8 @@
     올바른 괄호 문자열은 다음과 같이 정의된다.
     \begin{enumerate}
         \item 빈 문자열은 올바른 괄호 문자열이다.
-        \item \verb|A|가 올바른 괄호 문자열이면 괄호를 씌운 \verb|(A)|도 올바른 괄호 문자열이다.
-        \item \verb|A|와 \verb|B|가 올바른 괄호 문자열이면 둘을 이어붙인 \verb|AB|도 올바른 괄호 문자열이다.
+        \item \texttt{A}가 올바른 괄호 문자열이면 괄호를 씌운 \texttt{(A)}도 올바른 괄호 문자열이다.
+        \item \texttt{A}와 \texttt{B}가 올바른 괄호 문자열이면 둘을 이어붙인 \texttt{AB}도 올바른 괄호 문자열이다.
     \end{enumerate}
     
     지우는 트리의 아름다움을 트리의 정점 중 아름다운 정점의 수라고 정의했다. 피카츄를 도와 피카츄가 꾸민 트리가 얼마나 아름다운지 구하자.
@@ -34,7 +34,7 @@
     \InputFile
     첫 번째 줄에 노드의 개수 $N(2 \leq N \leq 10^5$)이 주어진다.
     
-    두 번째 줄에는 $0$과 $1$로만 이루어진 $N$개의 정수 $a_1, a_2, \cdots, a_N$가 공백으로 구분되어 주어진다. $a_i$가 0이면 정점 $i$에 여는 괄호 \verb|'('|가 적혀 있으며, 1이면 \verb|')'|이 적혀 있다.
+    두 번째 줄에는 $0$과 $1$로만 이루어진 $N$개의 정수 $a_1, a_2, \cdots, a_N$가 공백으로 구분되어 주어진다. $a_i$가 0이면 정점 $i$에 여는 괄호 \texttt{'('}가 적혀 있으며, 1이면 \texttt{')'}이 적혀 있다.
     
     이후 $N-1$개 줄에 걸쳐, 두 정수 $a$와 $b$가 공백으로 구분되어 주어진다. $ (1 \leq a, b \leq N) $ 이는 정점 $a$와 정점 $b$가 간선으로 연결되어 있음을 의미한다.
     
@@ -116,9 +116,9 @@
         \end{scope}
     \end{tikzpicture}
     \end{figure}
-    정점 1에서의 전위 순회는 1 \textrightarrow\ 2 \textrightarrow\ 5  \textrightarrow\ 6 \textrightarrow\ 7 \textrightarrow\ 4 \textrightarrow\ 9 \textrightarrow\ 8  \textrightarrow\ 3 \textrightarrow\ 10이고, 올바른 괄호 문자열 \verb|((())(()))|을 생성하기에 아름다운 정점이다. 
+    정점 1에서의 전위 순회는 1 $ \rightarrow $ \  2 $ \rightarrow $ \  5  $ \rightarrow $ \  6 $ \rightarrow $ \  7 $ \rightarrow $ \  4 $ \rightarrow $ \  9 $ \rightarrow $ \  8  $ \rightarrow $ \  3 $ \rightarrow $ \  10이고, 올바른 괄호 문자열 \texttt{((())(()))}을 생성하기에 아름다운 정점이다. 
     
-    정점 2에서의 전위 순회는 2 \textrightarrow\ 5  \textrightarrow\ 6 \textrightarrow\ 7으로, 올바른 괄호 문자열 \verb|(())|을 생성하기에 아름다운 정점이다.
+    정점 2에서의 전위 순회는 2 $ \rightarrow $ \  5  $ \rightarrow $ \  6 $ \rightarrow $ \  7으로, 올바른 괄호 문자열 \texttt{(())}을 생성하기에 아름다운 정점이다.
     
     그 외에 아름다운 정점은 존재하지 않는다.
 \end{problem}

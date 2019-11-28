@@ -9,44 +9,11 @@
     하지만 ALPS의 회장 이세정은 그 정답을 예전부터 알고 있었다. 해당 수열은 알파벳 소문자로 이루어진 단어를 아래 방법을 따라 변환시킨 것이다.
     
     \begin{enumerate}
-        \item 단어의 각 알파벳 소문자를 아래 표와 같이 1에서 26으로 변환한다.
-        \item 이웃한 두 숫자를 곱한 결과를 한 글자씩 나열한다. 예를 들어, \texttt{apple}의 각 알파벳은 \texttt{1 16 16 12 5}으로 변환되고, 한 자씩 나열하면 \texttt{1 6 2 5 6 1 9 2 6 0}이 된다.
+        \item 단어의 각 알파벳 소문자를 알파벳 순으로 1에서 26으로 변환한다. \texttt{a}는 1로, \texttt{b}는 2로, \texttt{c}는 3으로, ..., \texttt{y}는 25로, \texttt{z}은 26으로 변환된다.
+        \item 이웃한 두 숫자를 곱한 결과를 한 글자씩 나열한다. 예를 들어, \texttt{apple}의 각 알파벳은 \texttt{1 16 16 12 5}으로 변환된다. 이웃한 두 숫자를 곱하면 \texttt{16 256 192 60}이 되며, 한 자씩 나열하면 \texttt{1 6 2 5 6 1 9 2 6 0}이 된다.
     \end{enumerate}
     
-    \begin{table}[h]
-        \centering
-        \begin{tabular}{|cc|cc|cc|cc|cc|cc|}
-            \hline
-            알파벳 & 숫자 & 알파벳 & 숫자 & 알파벳 & 숫자 & 알파벳 & 숫자 & 알파벳 & 숫자 & 알파벳 & 숫자  \\ \hline \hline
-            \texttt{a} & 1 &
-            \texttt{b} & 2 &
-            \texttt{c} & 3 &
-            \texttt{d} & 4 &
-            \texttt{e} & 5 &
-            \texttt{f} & 6 \\ \hline
-            \texttt{g} & 7 &
-            \texttt{h} & 8 &
-            \texttt{i} & 9 &
-            \texttt{j} & 10 &
-            \texttt{k} & 11 &
-            \texttt{l} & 12 \\ \hline
-            \texttt{m} & 13 &
-            \texttt{n} & 14 &
-            \texttt{o} & 15 &
-            \texttt{p} & 16 &
-            \texttt{q} & 17 &
-            \texttt{r} & 18 \\ \hline
-            \texttt{s} & 19 &
-            \texttt{t} & 20 &
-            \texttt{u} & 21 &
-            \texttt{v} & 22 &
-            \texttt{w} & 23 &
-            \texttt{x} & 24 \\ \hline
-            \texttt{y} & 25 &
-            \texttt{z} & 26 &
-            & & & & & & & \\ \hline
-        \end{tabular}
-    \end{table}
+   
     %a:1, b:2, c:3, d:4, e:5, f:6, g:7, h:8, i:9, j:10, k:11, l:12, m:13
     %n:14, o:15, p:16, q:17, r:18, s:19, t:20, u:21, v:22, w:23, x:24, y:25, z:26
     %[변환 표] 

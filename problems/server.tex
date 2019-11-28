@@ -10,12 +10,12 @@
     $1048573 = 2^{20} - 3$은 소수이다.
     
     \InputFile
-    첫 번째 줄에는 세 정수 $k$, $a$, $n$이 주어진다. ($1 \leq k \leq 40, 1 \leq a \leq 10^6, 1 \leq n \leq 10^{15}$)
+    첫 번째 줄에는 세 정수 $k$, $a$, $n$이 공백으로 구분되어 주어진다. ($1 \leq k \leq 40, 1 \leq a \leq 10^6, 1 \leq n \leq 10^{15}$)
     
     $k$는 제공되는 디스크의 용량의 가짓수, $a$는 각 용량별 서로 다른 디스크의 개수, $n$은 증축해야 하는 용량을 의미한다.
     
     \OutputFile
-    첫 번째 줄에 증축할 수 있도록 디스크를 선택하는 경우의 수를 $1048573$으로 나눈 나머지를 출력한다.
+    첫 번째 줄에 정확히 $n$ MB를 증축할 수 있도록 디스크를 선택하는 경우의 수를 $1048573$으로 나눈 나머지를 출력한다.
     
     \Examples
     \begin{example}
@@ -39,7 +39,11 @@
     \Note
     이 문제를 풀 때 뤼카의 정리(Lucas' Theorem)을 사용하면 편리할 것이다. 
     
-    뤼카의 정리란, 양의 정수 $m$, $n$이 소수 $p$에 대해 $p$진법으로 각각 $m_{k}m_{k-1}\cdots m_{0}{_{(p)}}$, $n_{k}n_{k-1}\cdots n_{0}{_{(p)}}$으로 표현될 때, $$\binom{m}{n} \equiv \prod_{i=0}^{k} \binom{m_i}{n_i} \pmod p$$이 성립한다는 것이다. $\binom{n}{r} = \frac{n!}{r!(n-r)!}$이며, $n < r$일 때 $\binom{n}{r} = 0$으로 정의한다.
+    뤼카의 정리란, 양의 정수 $m$, $n$이 소수 $p$에 대해 $p$진법으로 각각 $m_{k}m_{k-1}\cdots m_{0}{_{(p)}}$, $n_{k}n_{k-1}\cdots n_{0}{_{(p)}}$으로 표현될 때,
+    $$
+    \binom{m}{n} \equiv \binom{m_k}{n_k} \times \binom{m_{k-1}}{n_{k-1}} \times \cdots \times \binom{m_1}{n_1} \times \binom{m_0}{n_0} \pmod p
+    $$
+    이 성립한다는 것이다. $\binom{n}{r} = \frac{n!}{r!(n-r)!}$이며, $n < r$일 때 $\binom{n}{r} = 0$으로 정의한다.
     
 \end{problem}
 
