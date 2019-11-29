@@ -1,8 +1,11 @@
+% !TeX document-id = {501096d1-60ff-4141-9b58-4a6551a10e1b}
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
 \documentclass[11pt,a4paper,oneside,korean]{article}
 
 \usepackage{kotex}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+\usepackage{minted} % (sob)
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amssymb} 
@@ -22,7 +25,7 @@
 \usetikzlibrary{patterns}
 \renewcommand{\baselinestretch}{1.15}
 \contest
-{고려대학교 프로그래밍 경시대회 - 타 전공/신입생 부문 {\color{red} Revision 7}}%
+{고려대학교 프로그래밍 경시대회 - 타 전공/신입생 부문}%
 {Korea University}%
 {2019.11.30}%
 
@@ -36,10 +39,10 @@
     %\displayauthorinfootertrue
     %\intentionallyblankpagestrue
 
-    %\begin{titlepage}
-    %    \setboolean{@twoside}{false}
-    %    \includepdf[pages=-, offset=70 -105]{./cover/KCPC-cover-advanced.pdf}
-    %\end{titlepage}
+    \begin{titlepage}
+        \setboolean{@twoside}{false}
+        \includepdf[pages=-, offset=70 -105]{./cover/kcpc2019-div2-cover.pdf}
+    \end{titlepage}
     
     \begin{figure}[h]
         \centering
