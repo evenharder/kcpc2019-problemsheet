@@ -58,6 +58,50 @@
     
     세 번째 예제의 경우 \texttt{K\underline{C}P\underline{C}K\underline{C}P\underline{C}}와 \texttt{\underline{K}CP\underline{C}KC\underline{P}\underline{C}}처럼 \texttt{CCCC}로도 \texttt{KCPC}로도 축약할 수 있다.
     
+    \Note
+    입력받은 문자열의 길이를 각 언어별로 알아내어 출력하는 프로그램은 다음과 같다.
     
+\begin{minted}{c}
+// C에서 입력받은 단어의 길이 출력하기
+#include <stdio.h>
+#include <string.h>
+char s[20];
+int main() {
+    scanf("%s", s);
+    int slen = strlen(s);
+    printf("%d\n", slen);
+}
+\end{minted}
+\begin{minted}{cpp}
+// C++에서 입력받은 단어의 길이 출력하기
+#include <iostream>
+#include <string>
+std::string s;
+int main() {
+    std::cin >> s; // std::string에 scanf는 직접적으로 사용할 수 없다
+    int slen = int(s.length());
+    std::cout << slen << '\n';
+}
+\end{minted}
+\begin{minted}{python}
+# Python에서 입력받은 줄의 길이 알아내기
+s = input()
+slen = len(s)
+print(slen)
+\end{minted}
+\begin{minted}{java}
+// Java에서 입력받은 단어의 길이 알아내기
+import java.util.Scanner;
+class StringLength {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String s = in.next();
+        int slen = s.length();
+        System.out.println(slen);
+    }
+}
+\end{minted}
+언어별로 `단어'와 `줄'의 차이가 있지만, 이 문제에서는 단어와 줄이 같다고 보아도 된다.
+
 \end{problem}
 
