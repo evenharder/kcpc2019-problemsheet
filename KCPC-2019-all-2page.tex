@@ -1,0 +1,64 @@
+% !TeX document-id = {e296ede7-4570-4b7d-ba2a-f601a2ad0616}
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+\documentclass[11pt,a4paper,oneside,korean]{article}
+
+\usepackage{kotex}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{minted} % (sob)
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb} 
+\usepackage{textcomp}
+\usepackage{xcolor} % for colored text
+\usepackage{import} % for changing current dir
+\usepackage{daytime} % for displaying version number and date
+\usepackage{wrapfig} % for having text alongside pictures
+\usepackage{array} % compatibility check
+\usepackage{enumitem} % for item environment line spacing
+\usepackage{framed}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{olymp} % modified by @evenharder
+\usepackage{kcpc2019}
+\usetikzlibrary{patterns}
+\renewcommand{\baselinestretch}{1.15}
+\contest
+{고려대학교 프로그래밍 경시대회}%
+{Korea University}%
+{2019.11.30}%
+
+\binoppenalty=10000
+\relpenalty=10000
+\exhyphenpenalty=10000
+\def\NoInputFileName{}
+\def\NoOutputFileName{}
+\def\ShortProblemTitle{}
+\begin{document}
+    %\import{"./problems/"}{first.tex}    
+    %\setcounter{page}{1}
+    %\import{"./problems/"}{pika.tex}
+    %\setcounter{page}{1}
+    %\import{"./problems/"}{trap.tex}
+    %\setcounter{page}{1}
+    %\import{"./problems/"}{posterpp.tex}
+    %\setcounter{page}{1}
+    %\import{"./problems/"}{faith.tex}
+    %\setcounter{page}{1}
+    %\import{"./problems/"}{oo.tex}
+    %\setcounter{page}{1}
+    %\import{"./problems/"}{nocarry.tex}
+    %\setcounter{page}{1}
+    %\import{"./problems/"}{server.tex}
+    %%\setcounter{page}{1}
+    %\import{"./problems/"}{trip.tex}
+    
+    \setcounter{page}{1}
+    \import{"./problems/"}{acronym.tex} % 2page  
+    \setcounter{page}{1}
+    \import{"./problems/"}{cake.tex} % 2page
+    \setcounter{page}{1}
+    \import{"./problems/"}{pretty.tex}
+\end{document}
+
